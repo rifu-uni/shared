@@ -6,6 +6,11 @@ platforms = ["osx-arm64"]
 version = "0.1.0"
 
 [tasks]
+normalize = "bash invexp/norm120.sh"
+norm-walk = "bash invexp/norm120.sh walkTest 120"
+dt-walk = "DT_OUT_DIR=invexp/walkTest bash invexp/walkTest/dt_csv.sh walkTest/001.MOV walkTest/002.MOV walkTest/003.MOV"
+manifest = "bash invexp/manifest.sh"
+clean-derived = "bash invexp/clean_derived.sh"
 
 [dependencies]
 python = ">=3.14.7,<3.15"
@@ -14,3 +19,4 @@ ipython = ">=9.17.1,<10"
 jupyter = ">=1.1.1,<2"
 numpy = ">=2.5.3,<3"
 matplotlib = ">=3.11.2,<4"
+pandas = ">=3.0.6,<4"

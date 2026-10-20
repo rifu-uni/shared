@@ -1,3 +1,19 @@
 # pixi environments
 .pixi
-.vscode
+.vscodevault
+scripts
+
+# macOS
+**/.DS_Store
+
+# Heavy local media (stored outside the repo in INVEXP_DATA_DIR)
+invexp/calibration/
+invexp/walkTest/*.MOV
+invexp/walkTest/normalized/*.avi
+**/*.MOV
+**/*.mov
+**/*.MP4
+**/*.mp4
+**/*.AVI
+**/*.avi
+**/*.mkv
