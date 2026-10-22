@@ -1,0 +1,22 @@
+# Defaults for the existing 120 fps walkTest clips.
+model: heavy
+min_pose_detection_confidence: 0.5
+min_pose_presence_confidence: 0.5
+min_tracking_confidence: 0.5
+
+# A landmark below this visibility is treated as missing; no interpolation.
+visibility_threshold: 0.5
+
+# Savitzky-Golay applied inside contiguous valid runs only.
+smoothing_window: 7
+smoothing_order: 2
+
+# Contact = prominent local maximum of the lowest foot point.
+event_min_distance_s: 0.25
+event_prominence_frac: 0.015
+event_horizontal_prominence_frac: 0.03
+event_ground_tolerance_frac: 0.08
+
+# Tracker annotation for 001; used by `validate`.
+manual_start_frame: 1286
+manual_fps: 120.0

@@ -1,0 +1,51 @@
+config,net,from_ref,from_pin,to_ref,to_pin,note
+direct,3V3,ESP32,3V3,RAIL_3V3,+,Feed the breadboard 3V3 rail from the ESP32 3V3 pin.
+direct,3V3,RAIL_3V3,+,BMI160,VIN,GY-BMI160: feed VIN from 3.3 V. Its 3.9k pull-ups and LDO input are tied to VIN; 5 V here would put 5 V on SDA/SCL. Leave 3V3 open.
+direct,3V3,RAIL_3V3,+,BMI160,CS,CS HIGH selects I2C. Floating or LOW selects SPI and hides the sensor.
+direct,GND,RAIL_GND,-,BMI160,SA0,SA0 LOW = 0x68. The onboard R4 pulls SA0 high; this strap overrides it to GND.
+direct,GND,ESP32,GND,RAIL_GND,-,Common ground rail; one star point at the ESP32 GND pin.
+direct,GND,RAIL_GND,-,BMI160,GND,
+direct,SDA,ESP32,GPIO8,BMI160,SDA,I2C data. 100 kHz for the first bring-up.
+direct,SCL,ESP32,GPIO9,BMI160,SCL,I2C clock.
+direct,NC,BMI160,INT1,-,-,Leave open; no wire.
+direct,NC,BMI160,INT2,-,-,Leave open; no wire.
+direct,NC,BMI160,3V3,-,-,LDO output on the GY-BMI160; leave open when VIN is powered.
+direct,NC,BMI160,SCX,-,-,Secondary interface clock; leave open in this test.
+direct,NC,BMI160,SDX,-,-,Secondary interface data; leave open in this test.
+direct,NC,BMI160,OCS,-,-,Secondary OIS chip select; leave open in this test.
+mux,3V3,ESP32,3V3,RAIL_3V3,+,Feed the breadboard 3V3 rail from the ESP32 3V3 pin.
+mux,3V3,RAIL_3V3,+,MUX,VIN,Mux supply. 3.3 V.
+mux,3V3,RAIL_3V3,+,MUX,RESET,RESET must be HIGH. Do not leave floating.
+mux,3V3,RAIL_3V3,+,BMI160,VIN,Sensor supply from the 3V3 rail; the mux switches only SDA/SCL. Pull-ups and LDO input are tied to VIN; leave 3V3 open.
+mux,3V3,RAIL_3V3,+,BMI160,CS,CS HIGH selects I2C.
+mux,GND,RAIL_GND,-,BMI160,SA0,SA0 LOW = 0x68. The onboard R4 pulls SA0 high; this strap overrides it to GND.
+mux,GND,ESP32,GND,RAIL_GND,-,Common ground rail.
+mux,GND,RAIL_GND,-,MUX,GND,
+mux,GND,RAIL_GND,-,MUX,A0,Address strap LOW -> 0x70.
+mux,GND,RAIL_GND,-,MUX,A1,Address strap LOW -> 0x70.
+mux,GND,RAIL_GND,-,MUX,A2,Address strap LOW -> 0x70.
+mux,GND,RAIL_GND,-,BMI160,GND,
+mux,SDA,ESP32,GPIO8,MUX,SDA,Trunk SDA. The mux is the only device on the ESP32 bus.
+mux,SCL,ESP32,GPIO9,MUX,SCL,Trunk SCL.
+mux,MUX_CH0_SDA,MUX,SD0,BMI160,SDA,Channel 0 data. Only channel 0 is populated today.
+mux,MUX_CH0_SCL,MUX,SC0,BMI160,SCL,Channel 0 clock.
+mux,NC,MUX,SD1,-,-,Channel 1 unused: leave open. SC1 also open.
+mux,NC,MUX,SD2,-,-,Channel 2 unused: leave open. SC2 also open.
+mux,NC,MUX,SD3,-,-,Channel 3 unused: leave open. SC3 also open.
+mux,NC,MUX,SD4,-,-,Channel 4 unused: leave open. SC4 also open.
+mux,NC,MUX,SD5,-,-,Channel 5 unused: leave open. SC5 also open.
+mux,NC,MUX,SD6,-,-,Channel 6 unused: leave open. SC6 also open.
+mux,NC,MUX,SD7,-,-,Channel 7 unused: leave open. SC7 also open.
+mux,NC,MUX,SC1,-,-,Channel 1 unused: leave open. SD1 also open.
+mux,NC,MUX,SC2,-,-,Channel 2 unused: leave open. SD2 also open.
+mux,NC,MUX,SC3,-,-,Channel 3 unused: leave open. SD3 also open.
+mux,NC,MUX,SC4,-,-,Channel 4 unused: leave open. SD4 also open.
+mux,NC,MUX,SC5,-,-,Channel 5 unused: leave open. SD5 also open.
+mux,NC,MUX,SC6,-,-,Channel 6 unused: leave open. SD6 also open.
+mux,NC,MUX,SC7,-,-,Channel 7 unused: leave open. SD7 also open.
+mux,NC,BMI160,INT1,-,-,Leave open; no wire.
+mux,NC,BMI160,INT2,-,-,Leave open; no wire.
+mux,NC,BMI160,3V3,-,-,LDO output on the GY-BMI160; leave open when VIN is powered.
+mux,NC,BMI160,SCX,-,-,Secondary interface clock; leave open in this test.
+mux,NC,BMI160,SDX,-,-,Secondary interface data; leave open in this test.
+mux,NC,BMI160,OCS,-,-,Secondary OIS chip select; leave open in this test.

@@ -1,0 +1,4 @@
+video_id,frames_processed,frames_detected,detection_rate,contacts,selected_side
+001,3126,411,0.13147792706333974,7,left
+002,4458,698,0.15657245401525346,11,left
+003,2528,473,0.18710443037974683,9,right

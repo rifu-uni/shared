@@ -1,0 +1,72 @@
+# Pose pipeline: 001
+
+- Frames processed: 3126
+- Frames detected: 411
+- Detection rate: 13.1 %
+- Model: heavy
+- Elapsed: 51.617 s
+
+## Contacts
+
+```
+ side  n_contacts  median_stride_s  median_cadence_spm  median_stance_s
+ left           4         0.992083          120.957581         0.712917
+right           3         0.996250          120.453801         0.717083
+```
+
+## Kinematics
+
+- Valid frames: 774 / 6252
+- knee_flexion_deg: median 16.9°, range 0.1–174.7°
+- hip_flexion_deg: median 15.9°, range 0.1–177.6°
+- ankle_angle_deg: median 110.3°, range 27.0–173.3°
+
+## Manual validation
+
+```json
+{
+  "side": "left",
+  "tracker_start_frame": 1286,
+  "trajectory": {
+    "n": 361,
+    "mean_offset_px": {
+      "x": -19.69283347871806,
+      "y": 25.2828943019381
+    },
+    "raw_rmse_px": {
+      "x": 27.123548749137893,
+      "y": 33.72110167420748,
+      "resultant": 43.275854640539436
+    },
+    "centered_rmse_px": {
+      "x": 18.651520214887064,
+      "y": 22.31340300893758,
+      "resultant": 29.082076269854007
+    },
+    "bland_altman_px": {
+      "x": {
+        "bias": -19.69283347871806,
+        "sd": 18.677407139510162,
+        "loa_low": -56.30055147215798,
+        "loa_high": 16.91488451472186
+      },
+      "y": {
+        "bias": 25.2828943019381,
+        "sd": 22.344372354874114,
+        "loa_low": -18.512075513615166,
+        "loa_high": 69.07786411749137
+      }
+    }
+  },
+  "contacts": {
+    "n_manual": 4,
+    "n_pose": 4,
+    "n_matched": 3,
+    "tolerance_s": 0.15,
+    "bias_s": 0.0675001100000004,
+    "sd_s": 0.004732351163800977,
+    "loa_low_s": 0.058224701718950486,
+    "loa_high_s": 0.07677551828105032
+  }
+}
+```

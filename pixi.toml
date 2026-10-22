@@ -11,6 +11,7 @@ norm-walk = "bash invexp/norm120.sh walkTest 120"
 dt-walk = "DT_OUT_DIR=invexp/walkTest bash invexp/walkTest/dt_csv.sh walkTest/001.MOV walkTest/002.MOV walkTest/003.MOV"
 manifest = "bash invexp/manifest.sh"
 clean-derived = "bash invexp/clean_derived.sh"
+schematic = "python invexp/esp320/schematic/generate_schematic.py"
 
 [dependencies]
 python = ">=3.14.7,<3.15"
@@ -20,3 +21,32 @@ jupyter = ">=1.1.1,<2"
 numpy = ">=2.5.3,<3"
 matplotlib = ">=3.11.2,<4"
 pandas = ">=3.0.6,<4"
+schemdraw = ">=0.19,<0.20"
+scipy = ">=1.18.1,<2"
+
+# MediaPipe does not publish a conda-forge package for osx-arm64. Keep the
+# pose stack in its own pixi environment rather than mixing native ML libraries
+# into the workspace Python 3.14 notebook environment.
+[feature.pose.dependencies]
+python = ">=3.12,<3.13"
+# Conda build links against the env's ffmpeg; the PyPI sdist was linking
+# against Homebrew ffmpeg, which makes the env non-reproducible.
+av = ">=19.0.2,<20"
+
+[feature.pose.tasks]
+pose = "PYTHONPATH=invexp/pose python -m invexp_pose.cli"
+pose-test = "PYTHONPATH=invexp/pose python -m pytest -q invexp/pose/tests"
+pose-overlays = "PYTHONPATH=invexp/pose python -m invexp_pose.cli overlay-batch --output-dir invexp/walkTest/pose --force"
+
+[feature.pose.pypi-dependencies]
+mediapipe = "==1.1.1"
+numpy = "==2.5.4"
+pandas = "==3.0.6"
+scipy = "==1.18.1"
+pyyaml = "==6.0.3"
+matplotlib = "==3.11.2"
+pytest = "==9.1.1"
+
+[environments]
+default = { features = [], solve-group = "default" }
+pose = { features = ["pose"], solve-group = "pose", no-default-feature = true }

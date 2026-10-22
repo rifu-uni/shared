@@ -1,0 +1,43 @@
+{
+  "video_id": "003",
+  "landmarks": "/Users/rifusaki/Documents/University/XII/InvExp/data/derived/pose/003_landmarks.csv.gz",
+  "selected_side": "right",
+  "side_visibility": {
+    "left": 0.18117088607594936,
+    "right": 0.18275316455696203
+  },
+  "frames": 2528,
+  "kinematics_rows": 5056,
+  "valid_kinematics_rows": 790,
+  "contacts": 9,
+  "contacts_by_side": {
+    "left": 5,
+    "right": 4
+  },
+  "pose": {
+    "video_id": "003",
+    "video": {
+      "path": "/Users/rifusaki/Documents/University/XII/InvExp/data/walkTest/003.MOV",
+      "width": 1920,
+      "height": 1080,
+      "fps": 119.93595192440746,
+      "frame_count": 2528,
+      "duration_s": 21.076666666666668,
+      "codec": "hevc",
+      "time_base": "1/2400"
+    },
+    "frames_processed": 2528,
+    "frames_detected": 473,
+    "detection_rate": 0.18710443037974683,
+    "first_pts_s": 0.0,
+    "last_pts_s": 21.069583333333334,
+    "timestamp_adjustments": 0,
+    "model": "heavy",
+    "model_sha256": "64437af838a65d18e5ba7a0d39b465540069bc8aae8308de3e318aad31fcbc7b",
+    "start_s": null,
+    "end_s": null,
+    "stride": 1,
+    "limit": null,
+    "elapsed_s": 137.47
+  }
+}
