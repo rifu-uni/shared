@@ -17,3 +17,5 @@ invexp/walkTest/normalized/*.avi
 **/*.AVI
 **/*.avi
 **/*.mkv
+__pycache__/
+*.pyc
