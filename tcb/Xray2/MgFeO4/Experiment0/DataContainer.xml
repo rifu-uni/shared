@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<DataContainer xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" RawDataLength="1">
+  <CreatingVersion>6.5.0.0</CreatingVersion>
+  <Nodes />
+  <Identifier IdentificationType="RawData" UserName="D8 Controler" MachineName="DESKTOP-30KR7EV">
+    <Guid>f3ed7787-2287-4b0f-b603-80fcb4e63acf</Guid>
+    <Comment />
+    <TimeStampCreated>2026-10-14T10:10:57.4831607-05:00</TimeStampCreated>
+    <AdditionalIdentifications IdentificationType="RawData" UserName="D8 Controler" MachineName="DESKTOP-30KR7EV">
+      <Guid>05a03218-d044-414e-bf74-43cf534cf59e</Guid>
+      <Comment>Created by MeasurementScript</Comment>
+      <TimeStampCreated>2026-10-14T10:10:57.4831607-05:00</TimeStampCreated>
+    </AdditionalIdentifications>
+  </Identifier>
+  <ExpansionModelUsed>Standard</ExpansionModelUsed>
+  <MatchingModelUsed>Tolerant</MatchingModelUsed>
+  <RawDataReferenceList>
+    <string>Experiment0/RawData0.xml</string>
+  </RawDataReferenceList>
+  <ExperimentInfo xsi:type="XrdExperimentInfoData" LogicName="" VisibleName="">
+    <ApplicationType>PowderDiffraction</ApplicationType>
+    <ApplicationTypeSpecific>Standard</ApplicationTypeSpecific>
+    <KeyValueList>
+      <DataList />
+    </KeyValueList>
+    <Sequences />
+    <InstrumentDescription>
+      <InstrumentName>UNAL Universidad Nacional de Colombia</InstrumentName>
+      <IcsVersion>ICS,Version=6.05release/23-May-2016 build 8475 3507 3509 5080 (Jun  7 2016 14:23:40)</IcsVersion>
+      <SerialNo>212175</SerialNo>
+      <MaintenanceNumber>0</MaintenanceNumber>
+      <BootDevType>A25</BootDevType>
+      <BimlFile />
+    </InstrumentDescription>
+  </ExperimentInfo>
+  <MeasurementInfo UserName="Engineer" Site="" Comment="" SampleName="Commander Sample ID" ScriptName="" BsmlFileName="C:\ProgramData\Bruker AXS\Experiments\COMMANDER_MEASUREMENT_D8 Controler.bsml" SamplePosition="1A01" UserTaskFile="" />
+  <ReferencedMeasurements />
+  <EvalInfoList />
+  <TotalMeasurementTime Unit="s" Value="9.204366221" />
+</DataContainer>

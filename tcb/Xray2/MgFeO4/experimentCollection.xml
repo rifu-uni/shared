@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<ExperimentCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" EstimatedTotalTime="910" ScriptName="">
+  <CreatingVersion>6.5.0.0</CreatingVersion>
+  <Identifier IdentificationType="ExperimentCollection" UserName="D8 Controler" MachineName="DESKTOP-30KR7EV">
+    <Guid>d08931d5-623f-451f-a2c1-86aee4950083</Guid>
+    <Comment />
+    <TimeStampCreated>2026-10-14T10:10:55.4062904-05:00</TimeStampCreated>
+  </Identifier>
+  <ExperimentContainerItems>
+    <ApplicationType>PowderDiffraction</ApplicationType>
+    <ApplicationTypeSpecific>Standard</ApplicationTypeSpecific>
+    <AppInfo AppType="PowderDiffraction" AppTypeSpecific="Standard" DatabaseSampleID="" />
+    <EstimatedTime Unit="s" Value="910" />
+    <MatchingModelUsed>Tolerant</MatchingModelUsed>
+  </ExperimentContainerItems>
+  <EstimatedTime Unit="s" Value="0" />
+</ExperimentCollection>
