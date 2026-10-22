@@ -1,3 +1,0 @@
-No.	Visible	Name	Start pos. [°2Th.]	End pos. [°2Th.]	Step [°2Th.]	Measured Date/Time	Cluster Number	Crystallinity [%]	Autoscale	Autoshift	Humidity [%]	Sample Name	Sample Prepared By	Line Color	Fill Color
-1	False	MgFeO4	10.0000	74.9800	0.0300	10/14/2026  10:10:57	0	-1.00	1.00000	0.00000	0.00	 	 	Red	Yellow
-2	True	Strip K-Alpha2_1_MgFeO4	10.0000	74.9800	0.0300	10/14/2026  10:10:57	0	-1.00	1.00000	0.00000	0.00	 	 	Gray	Yellow

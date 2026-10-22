@@ -6,10 +6,7 @@ scripts
 # macOS
 **/.DS_Store
 
-# Heavy local media (stored outside the repo in INVEXP_DATA_DIR)
-invexp/calibration/
-invexp/walkTest/*.MOV
-invexp/walkTest/normalized/*.avi
+# Heavy local media
 **/*.MOV
 **/*.mov
 **/*.MP4
